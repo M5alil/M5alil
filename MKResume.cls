@@ -27,6 +27,11 @@
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{cfr-lm}
+\usepackage{relsize}
+\usepackage{xspace}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \setlength{\multicolsep}{0pt}
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -36,11 +41,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 \geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
-\renewcommand{\familydefault}{\sfdefault}
 % Sections formatting
 \titleformat{\section}{
     \vspace{0.0em}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0em}{0em}{0.5em}
 
 \newcommand{\emailsymbol}{\faAt}
 \newcommand{\phonesymbol}{\faPhone}
@@ -62,6 +67,10 @@
 \newcommand{\github}[1]{\def\gitlink{#1}\href{http://github.com/\gitlink}{\normalfont\githubsymbol\hspace{0.5em}\gitlink}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
 \newcommand{\contactinfo}[1]{\def\@contactinfo{#1}}
+\newcommand{\csharp}{{\settoheight{\dimen0}{C}C\hspace{0.1em}\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\textbf{\#}}}}}
+\newcommand{\Rplus}{\protect\hspace{-.1em}\protect\raisebox{.2ex}{\textbf{+}}}
+\newcommand{\Cpp}{\mbox{C\hspace{0.1em}\Rplus\Rplus}\xspace}
+
 \newcommand{\introSection}{
     \noindent
     \begin{tabularx}{\linewidth}{X c}
@@ -80,6 +89,7 @@
 
 \newcommand{\bioSection}{
     \section{Bio}\@bio
+    \vspace{1em}
 }
 
 \newenvironment{experience}
@@ -92,6 +102,9 @@
     \section{Education}
     \begin{itemize}[leftmargin=0.5em,labelsep=0em]
 }{\end{itemize}}
+
+\newenvironment{skills}{\section{Technical Skills and Interests}}{\vspace{1em}}
+\newenvironment{projects}{\section{Projects}}{}
 
 \newcommand{\job}[5]{
     \def\employername{#1}
