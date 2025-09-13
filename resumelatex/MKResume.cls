@@ -116,7 +116,7 @@
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \makecell[tl]{
             \large\textbf{\position}\\
-            \employername
+            @\employername
         }
         &
         \makecell[tr]{
