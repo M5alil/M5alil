@@ -33,18 +33,18 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 \setlength{\multicolsep}{0pt}
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\pagestyle{plain}
+% \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \setlength{\footskip}{4.08003pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.5cm}
 % Sections formatting
 \titleformat{\section}{
-    \vspace{0.0em}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule]
+    \vspace{0.5em}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule\vspace{0.5em}]
 \titlespacing*{\section}{0em}{0em}{0.5em}
 
 \newcommand{\emailsymbol}{\faAt}
@@ -95,12 +95,14 @@
 \newenvironment{experience}
 {
     \section{Experience}
-    \begin{itemize}[leftmargin=0.5em,labelsep=0em]}
-{\end{itemize}}
+    \begin{itemize}[leftmargin=0.5em,labelsep=0em]
+        \setlength{\itemsep}{1em}
+}{\end{itemize}}
 
 \newenvironment{education}{
     \section{Education}
     \begin{itemize}[leftmargin=0.5em,labelsep=0em]
+        \setlength{\itemsep}{1em}
 }{\end{itemize}}
 
 \newenvironment{skills}{\section{Technical Skills and Interests}}{\vspace{1em}}
