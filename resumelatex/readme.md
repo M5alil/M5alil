@@ -4,3 +4,6 @@ to create pdf file run the following command from tex file directory
 you will need to have `pdflatex` installed and added to system `PATH` and `MikTeX` for latex package management
 
 [windows installer](https://miktex.org/download)
+
+Alternatively, run the PowerShell build script:
+`./build.ps1`

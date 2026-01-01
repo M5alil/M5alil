@@ -29,7 +29,7 @@
 \usepackage{cfr-lm}
 \usepackage{relsize}
 \usepackage{xspace}
-\usepackage{helvet}
+\usepackage[sfdefault]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
 \setlength{\multicolsep}{0pt}
@@ -40,12 +40,12 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.5cm}
+\geometry{margin=1.2cm}
 % Sections formatting
 \titleformat{\section}{
     \vspace{0.5em}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule\vspace{0.5em}]
-\titlespacing*{\section}{0em}{0em}{0.5em}
+\titlespacing*{\section}{0em}{0.5em}{0.75em}
 
 \newcommand{\emailsymbol}{\faAt}
 \newcommand{\phonesymbol}{\faPhone}
@@ -95,13 +95,13 @@
 \newenvironment{experience}
 {
     \section{Experience}
-    \begin{itemize}[leftmargin=0.5em,labelsep=0em]
+    \begin{itemize}[leftmargin=1em,labelsep=0.5em]
         \setlength{\itemsep}{1em}
 }{\end{itemize}}
 
 \newenvironment{education}{
     \section{Education}
-    \begin{itemize}[leftmargin=0.5em,labelsep=0em]
+    \begin{itemize}[leftmargin=1em,labelsep=0.5em]
         \setlength{\itemsep}{1em}
 }{\end{itemize}}
 
